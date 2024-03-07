@@ -3,7 +3,7 @@ PROCEDURE Peminjaman_Buku
     INPUT judul_buku
     IF buku_available(judul_buku) THEN
         UPDATE status_buku(judul_buku) TO "Dipinjam"
-        PRINT "Buku", judul_buku, "telah berhasil dipinjam oleh", nama_peminjam
+        PRINT "Buku", judul_buku, "telah berhasil dipinjam oleh", nama_peminjam, "jangan lupa untuk mengembalikan buku tepat waktu"
     ELSE
         PRINT "Maaf, buku", judul_buku, "sedang tidak tersedia untuk dipinjam"
     END IF
